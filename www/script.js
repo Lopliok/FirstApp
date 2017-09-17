@@ -28,9 +28,9 @@ div = document.getElementById('block');
 tlacitko = document.body.getElementsByTagName('button')[0];
 
 
-console.log(tlacitko.innerText);
+//console.log(tlacitko.innerText);
 
-i = 0;
+
 
 
 /*
@@ -46,7 +46,7 @@ tlacitko.onclick = function(e) {
 
 kolekce = seznamUkoly.ChildNodes;
 
-console.log(kolekce);
+//console.log(kolekce);
 
 
 /*
@@ -94,12 +94,12 @@ vypis();
 tlacitko.onclick = function(e) {
   //div.innerText = Number(vstup1.value) + Number(vstup2.value);
   ukoly.push({text: vstup1.value, priorita: vstup_priorita.value, hotovo: false})
-  console.log(e);
-  console.log(ukoly);
-  console.log("Přidán úkol " + ukoly[i].text);
+  //console.log(e);
+  //console.log(ukoly);
+  //console.log("Přidán úkol " + ukoly[i].text);
 
   vycistiSeznam();
   vypis();
 }
 
-console.log(seznamUkoly);
+//console.log(seznamUkoly);
