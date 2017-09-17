@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+    </head>
+    <body>
+      <br />
+      <h1>Ukolovnik</h1>
+
+      <input type="text" name="textik">
+      <input type="number" name="cislo2">
+      <select name="priority">
+        <option value=1>High</option>
+        <option value=2>Lower</option>
+        <option value=3>Lowest</option>
+      </select>
+
+
+    <div id="block"></div>
+    <br />
+    <button name="tlacitko">Přidat ůkol</button>
+    <div id="tasks">
+      <h2>
+        úkoly
+      </h2>
+      <ul name="list">
+      </ul>
+    </div>
+
+
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript">
+          app.initialize();
+      </script>
+      <script type="text/javascript" src="script.js"></script>
+
+
+    </body>
+</html>
