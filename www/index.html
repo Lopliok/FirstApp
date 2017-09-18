@@ -4,13 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Blank App</title>
+        <style>
+          .vertical-menu {
+            /*  display: none;
+*/
+          }
+        </style>
     </head>
     <body>
       <br />
       <h1>Ukolovnik</h1>
-
       <input type="text" name="textik">
-      <input type="number" name="cislo2">
+
       <select name="priority">
         <option value=1>High</option>
         <option value=2>Lower</option>
@@ -21,6 +26,7 @@
     <div id="block"></div>
     <br />
     <button name="tlacitko">Přidat ůkol</button>
+    <button name="del">Smazat vše</button>
     <div id="tasks">
       <h2>
         úkoly
@@ -30,11 +36,22 @@
     </div>
 
 
-      <script type="text/javascript" src="cordova.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-      <script type="text/javascript">
-          app.initialize();
-      </script>
+    <!-- <div class="vertical-menu">
+      <button class="dropdown">Menu</button>
+      <nav>
+
+          <a href=""><div class="text">Domů</div></a>
+          <a href=""><div class="text">Vozidla</div></a>
+          <a href=""><div class="text">Rezervace</div></a>
+          <a href=""><div class="text">Kontakt</div></a>
+          <a href=""><div class="text">Vypis</div></a>
+          <a href=""><div class="text">Test JS</div></a>
+
+      </nav>
+    </div> -->
+
+
+      <script type="text/javascript" src="local.js"></script>
       <script type="text/javascript" src="script.js"></script>
 
 

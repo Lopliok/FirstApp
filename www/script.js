@@ -1,15 +1,16 @@
-var tlacitko, div, vstup1, vstup_priorita, vstup2;
+var tlacitko, div, vstup1, vstup_priorita, vstup2, smazat;
 var seznamUkoly;
+
+
 
 var ukoly;
 
 
-ukoly = [
-  {text: 'Koupit mléko.', priorita: 1, hotovo: false},
-  {text: 'Vynést odpadky.', priorita: 2, hotovo: false},
-  {text: 'Hrát šachy.', priorita: 3, hotovo: false}
+ukoly = [];
 
-];
+Local.load();
+
+//Local.remove();
 
 
 
@@ -21,7 +22,17 @@ vstup_priorita = document.body.getElementsByTagName('select')['priority'];
 
 vstup2 = document.body.getElementsByTagName('input')[1];
 
+smazat = document.body.getElementsByTagName('button')[1];
 
+
+//console.log(smazat);
+
+smazat.onclick = function() {
+  Local.remove();
+  ukoly = [];
+  vycistiSeznam();
+  vypis();
+}
 
 
 div = document.getElementById('block');
@@ -30,7 +41,9 @@ tlacitko = document.body.getElementsByTagName('button')[0];
 
 //console.log(tlacitko.innerText);
 
+//var i = 0;
 
+//console.log(i);
 
 
 /*
@@ -79,9 +92,11 @@ function vypis() {
 //   var prvek = e.target;
 //   if (prvek.nodeName == "li"){
 //     smazUkol(prvek);
-//   }
+//   }h
 //
 // });
+
+
 
 
 
@@ -91,13 +106,15 @@ vypis();
 
 
 
+
+
 tlacitko.onclick = function(e) {
   //div.innerText = Number(vstup1.value) + Number(vstup2.value);
   ukoly.push({text: vstup1.value, priorita: vstup_priorita.value, hotovo: false})
   //console.log(e);
   //console.log(ukoly);
-  //console.log("Přidán úkol " + ukoly[i].text);
-
+  //console.log("Přidán úkol " + ukoly[ukoly.length-1].text);
+  Local.save();
   vycistiSeznam();
   vypis();
 }
