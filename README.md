@@ -1,3 +1,5 @@
+It's first App which I build to Android and iOS App.
+
 # A Blank PhoneGap App
 
 ## Usage
